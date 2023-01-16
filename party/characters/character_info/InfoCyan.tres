@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_60sm1"]
+[ext_resource type="Texture2D" uid="uid://chgq5q6gmd7at" path="res://party/characters/character_icons/CyanToken.png" id="2_hmtpj"]
+[ext_resource type="Texture2D" uid="uid://d184rfmwudfdk" path="res://party/characters/character_profiles/Cyan.png" id="3_nt2ef"]
+
+[resource]
+script = ExtResource("1_60sm1")
+character_name = "Cyan"
+rarity = 2
+character_bio = "A paladin knight from a world of gods and honor. He and his horse Katabasis work together to bring many towns and cities his righteous blessing.
+
+Uses Wind."
+summon_quote = "My steed and I have come to meet your call. Get on - I speak best with air through my hair."
+attack_type = 4
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_hmtpj")
+skin_profile = ExtResource("3_nt2ef")

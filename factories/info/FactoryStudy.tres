@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c0rlmm4542ki0"]
+
+[ext_resource type="Script" path="res://scripts/FactoryInfo.gd" id="1_8e0bm"]
+
+[resource]
+script = ExtResource("1_8e0bm")
+factory_name = "Study"
+factory_type = 3
+automated = true
+count = 0
+buy_cost = 450
+growth_rate = 1.6
+upgrade_count = 0
+upgrade_cost_ratio = 600
+event_text = "You do a bit of studying.
+You feel a good bit smarter.
+You learn something interesting.
+A pile of books topples.
+You check out more books from the library.
+You return a few books to the library."
+base_output = 9
+output_rate = 3

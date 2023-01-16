@@ -1,0 +1,5 @@
+res://UI/SummonPanel.tscn
+res://factories/expeditions/info/InfoDelve.tres
+res://factories/expeditions/info/InfoMountain.tres
+res://factories/expeditions/info/InfoOcean.tres
+res://factories/expeditions/info/InfoAbyss.tres

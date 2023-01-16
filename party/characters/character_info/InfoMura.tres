@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_1aukj"]
+[ext_resource type="Texture2D" uid="uid://bmv0lg8r8rnod" path="res://party/characters/character_icons/MuraToken.png" id="2_x2he2"]
+[ext_resource type="Texture2D" uid="uid://b85yj18pmat74" path="res://party/characters/character_profiles/Mura.png" id="3_77cyx"]
+
+[resource]
+script = ExtResource("1_1aukj")
+character_name = "Mura"
+rarity = 1
+character_bio = "A woman from another world where a powerful darkness is encroaching on life. She dances with discs to control the breeze.
+
+Uses Wind."
+summon_quote = "Whoa! Hi, this place seems familiar. You working on something? Hmm, I could be convinced to help. Over drinks, perhaps?"
+attack_type = 4
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_x2he2")
+skin_profile = ExtResource("3_77cyx")

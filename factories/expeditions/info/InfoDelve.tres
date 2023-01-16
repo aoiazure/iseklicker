@@ -1,0 +1,86 @@
+[gd_resource type="Resource" load_steps=15 format=3 uid="uid://b3hmdkn8a0crq"]
+
+[ext_resource type="Script" path="res://factories/expeditions/expedition_events/ExpeditionEvent.gd" id="1_6x3dd"]
+[ext_resource type="Script" path="res://factories/expeditions/expedition_events/ExpeditionObstacle.gd" id="1_eyd6b"]
+[ext_resource type="Script" path="res://factories/expeditions/info/InfoDelve.gd" id="1_fqv7o"]
+
+[sub_resource type="Resource" id="Resource_lqs4w"]
+script = ExtResource("1_eyd6b")
+obstacle_name = "Rock Elemental"
+encounter_text = "The earth rumbled and shook and shattered. An enormous Rock Elemental emerges from the floor, moving stone like liquid."
+obstacle_hp = 12
+damage_type = 0
+weakness_type = 0
+resistance_type = 4
+
+[sub_resource type="Resource" id="Resource_hquoe"]
+script = ExtResource("1_eyd6b")
+obstacle_name = "Big Spider"
+encounter_text = "A giant spider leaps down from the ceiling, out for blood and prey."
+obstacle_hp = 12
+damage_type = 0
+weakness_type = 1
+resistance_type = 6
+
+[sub_resource type="Resource" id="Resource_w22ro"]
+script = ExtResource("1_eyd6b")
+obstacle_name = "Giant Mole"
+encounter_text = "A loud clatter rips the wall apart and a billed nose exposes itself to the air. Two blind eyes adorn the terrifying face of a Giant Mole!"
+obstacle_hp = 10
+damage_type = 0
+weakness_type = 5
+resistance_type = 4
+
+[sub_resource type="Resource" id="Resource_aahk0"]
+script = ExtResource("1_eyd6b")
+obstacle_name = "Moss Slimes"
+encounter_text = "A shlorp and a glorp echoes through the tunnel as a horde of mossy slimes come for the expedition!
+
+They're notoriously annoying to kill..."
+obstacle_hp = 8
+damage_type = 0
+weakness_type = 2
+resistance_type = 1
+
+[sub_resource type="Resource" id="Resource_3k7iv"]
+script = ExtResource("1_6x3dd")
+event_text = "%s tripped on a rock. Luckily, nothing was lost."
+result = 0
+
+[sub_resource type="Resource" id="Resource_q2qcp"]
+script = ExtResource("1_6x3dd")
+event_text = "%s got lost for a few hours, wasting valuable time."
+result = -1
+
+[sub_resource type="Resource" id="Resource_bfdkd"]
+script = ExtResource("1_6x3dd")
+event_text = "While searching, %s finds a beautiful diamond."
+result = 1
+
+[sub_resource type="Resource" id="Resource_3tp77"]
+script = ExtResource("1_6x3dd")
+event_text = "A stalactite falls from the ceiling in front of %s, revealing an abundance of valuable crystals."
+result = 1
+
+[sub_resource type="Resource" id="Resource_aaumy"]
+script = ExtResource("1_6x3dd")
+event_text = "An unexpected rock slide crashes before %s, slowing the expedition down."
+result = -1
+
+[sub_resource type="Resource" id="Resource_a7qgj"]
+script = ExtResource("1_6x3dd")
+event_text = "A small cave rat pokes it head out to say hi to %s."
+result = 0
+
+[sub_resource type="Resource" id="Resource_g5yhu"]
+script = ExtResource("1_6x3dd")
+event_text = "While exploring, %s found a nice view."
+result = 0
+
+[resource]
+script = ExtResource("1_fqv7o")
+members_required = 1
+max_members = 4
+expedition_time = 30.0
+random_events = [SubResource("Resource_3k7iv"), SubResource("Resource_q2qcp"), SubResource("Resource_bfdkd"), SubResource("Resource_3tp77"), SubResource("Resource_aaumy"), SubResource("Resource_a7qgj"), SubResource("Resource_g5yhu")]
+obstacles = [SubResource("Resource_lqs4w"), SubResource("Resource_hquoe"), SubResource("Resource_w22ro"), SubResource("Resource_aahk0")]

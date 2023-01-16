@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_8nfxx"]
+[ext_resource type="Texture2D" uid="uid://c0f4cjc0imfp" path="res://party/characters/character_icons/AbjuraToken.png" id="2_774fb"]
+[ext_resource type="Texture2D" uid="uid://be2dyh0fue7c7" path="res://party/characters/character_profiles/Abjura.png" id="3_o1htt"]
+
+[resource]
+script = ExtResource("1_8nfxx")
+character_name = "Abjura"
+rarity = 0
+character_bio = "A cleric from a world where the gods are real. She can still call on them here, somehow.
+
+Uses Light."
+summon_quote = "W-Where am I, exactly? Your world? Because you need 'manpower'? Sure, I guess..."
+attack_type = 6
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_774fb")
+skin_profile = ExtResource("3_o1htt")

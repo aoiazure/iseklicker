@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_0jmpd"]
+[ext_resource type="Texture2D" uid="uid://wcgjmy28loym" path="res://party/characters/character_icons/JesterToken.png" id="2_21soa"]
+[ext_resource type="Texture2D" uid="uid://1401osw1elxu" path="res://party/characters/character_profiles/Jester.png" id="3_akmrp"]
+
+[resource]
+script = ExtResource("1_0jmpd")
+character_name = "Jester"
+rarity = 1
+character_bio = "An elusive individual from a world removed from time. Little information is known about them. They fight with powerful magic.
+
+Uses Light."
+summon_quote = "Well, well, what do we have here? Another whelp playing at powers beyond their ken? Let's see how this turns out."
+attack_type = 6
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_21soa")
+skin_profile = ExtResource("3_akmrp")

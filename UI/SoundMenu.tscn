@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://ds8su4pfauj0u"]
+
+[ext_resource type="Texture2D" uid="uid://dn5bjovphefdj" path="res://assets/sound-on.svg" id="1_31lpj"]
+[ext_resource type="Script" path="res://UI/SoundButton.gd" id="3_147cp"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_kq3dt"]
+keycode = 77
+
+[sub_resource type="Shortcut" id="Shortcut_p7chy"]
+events = [SubResource("InputEventKey_kq3dt")]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vabhg"]
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="SoundMenu" type="TextureButton"]
+offset_left = 1240.0
+offset_top = 680.0
+offset_right = 1272.0
+offset_bottom = 712.0
+shortcut = SubResource("Shortcut_p7chy")
+texture_normal = ExtResource("1_31lpj")
+texture_pressed = ExtResource("1_31lpj")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_147cp")
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+title = "Settings"
+size = Vector2i(200, 100)
+borderless = false
+theme_override_styles/panel = SubResource("StyleBoxFlat_vabhg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel"]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 198.0
+offset_bottom = 98.0
+alignment = 1
+
+[node name="Label" type="Label" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+text = "Sound Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="PopupPanel/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="value_changed" from="PopupPanel/VBoxContainer/VolumeSlider" to="." method="_on_volume_slider_value_changed"]

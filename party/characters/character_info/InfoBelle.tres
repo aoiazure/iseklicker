@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_6p5an"]
+[ext_resource type="Texture2D" uid="uid://bcjrsiyec5tk1" path="res://party/characters/character_icons/BelleToken.png" id="2_7xp3l"]
+[ext_resource type="Texture2D" uid="uid://bj21gwp3h2n1h" path="res://party/characters/character_profiles/Belle.png" id="3_di17c"]
+
+[resource]
+script = ExtResource("1_6p5an")
+character_name = "Belle"
+rarity = 0
+character_bio = "A young thief from a world where the skies are always gray and the sun's shine is a holiday.
+
+Deals Physical."
+summon_quote = "Why is it so bright... Oh! You! This sky is clearly not my own, but honestly? I love it!"
+attack_type = 1
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_7xp3l")
+skin_profile = ExtResource("3_di17c")

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c2h1jm48bsf4y"]
+
+[ext_resource type="Script" path="res://scripts/FactoryInfo.gd" id="1_alver"]
+
+[resource]
+script = ExtResource("1_alver")
+factory_name = "Dungeon Delve"
+factory_type = 6
+automated = false
+count = 0
+buy_cost = 1
+growth_rate = 1.07
+upgrade_count = 0
+upgrade_cost_ratio = 10
+event_text = ""
+base_output = 180
+output_rate = -1

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://chbhq0lev5r2v"]
+
+[ext_resource type="Script" path="res://scripts/FactoryInfo.gd" id="1_rlm1d"]
+
+[resource]
+script = ExtResource("1_rlm1d")
+factory_name = "Mining"
+factory_type = 4
+automated = true
+count = 0
+buy_cost = 700
+growth_rate = 1.5
+upgrade_count = 0
+upgrade_cost_ratio = 1000
+event_text = "You find some beautiful rocks.
+You get a lot of raw iron.
+You lay down some tracks for the future.
+You break a pickaxe. Time for another!
+Your lamp goes out, so you light another one.
+The air is a little thin here, so you back out for a second."
+base_output = 20
+output_rate = 5

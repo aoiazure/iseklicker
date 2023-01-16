@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7lvjqvw7mldv"]
+
+[ext_resource type="Script" path="res://factories/FactoryMenu.gd" id="1_62hcc"]
+[ext_resource type="Texture2D" uid="uid://byk4vg2i71w3q" path="res://assets/Coins.png" id="2_2ln4a"]
+
+[sub_resource type="Animation" id="Animation_ltq63"]
+resource_name = "output"
+length = 0.5
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ofpu4"]
+_data = {
+"output": SubResource("Animation_ltq63")
+}
+
+[node name="FactoryMenu" type="VSplitContainer"]
+offset_right = 128.0
+offset_bottom = 93.0
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+collapsed = true
+dragger_visibility = 1
+script = ExtResource("1_62hcc")
+
+[node name="FactoryNameLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+bbcode_enabled = true
+text = "[p align=center][b]Factory Name[/b]"
+fit_content_height = true
+scroll_active = false
+
+[node name="Interactions" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="BuyButton" type="Button" parent="Interactions"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+text = "Buy"
+icon = ExtResource("2_2ln4a")
+expand_icon = true
+
+[node name="UpgradeButton" type="Button" parent="Interactions"]
+layout_mode = 2
+text = "Enhance"
+expand_icon = true
+
+[node name="ProgressBar" type="ProgressBar" parent="Interactions"]
+layout_mode = 2
+show_percentage = false
+
+[node name="HSeparator" type="HSeparator" parent="Interactions"]
+layout_mode = 2
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ofpu4")
+}
+
+[connection signal="pressed" from="Interactions/BuyButton" to="." method="_on_buy_button_pressed"]
+[connection signal="pressed" from="Interactions/UpgradeButton" to="." method="_on_upgrade_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

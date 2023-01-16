@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_vv6jj"]
+[ext_resource type="Texture2D" uid="uid://c2m4lwm42s2i8" path="res://party/characters/character_icons/LilacToken.png" id="2_kwt5c"]
+[ext_resource type="Texture2D" uid="uid://cgqlg8voq6ai0" path="res://party/characters/character_profiles/Lilac.png" id="3_g5rt8"]
+
+[resource]
+script = ExtResource("1_vv6jj")
+character_name = "Lilac"
+rarity = 2
+character_bio = "A woman from another world where villains are ever plentiful and heroes ever dwindling. She fights with fans to keep people safe, turning back tides of  foes.
+
+Uses Earth."
+summon_quote = "Where I go, death has always followed. And you ask me to march with you? If it's what you want, then I'll oblige."
+attack_type = 5
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_kwt5c")
+skin_profile = ExtResource("3_g5rt8")

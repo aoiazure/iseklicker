@@ -1,0 +1,143 @@
+[gd_resource type="Resource" load_steps=22 format=3 uid="uid://bp54id52tsdfe"]
+
+[ext_resource type="Script" path="res://factories/expeditions/expedition_events/ExpeditionObstacle.gd" id="1_utekd"]
+[ext_resource type="Script" path="res://factories/expeditions/ExpeditionInfo.gd" id="1_ve8wc"]
+[ext_resource type="Script" path="res://factories/expeditions/expedition_events/ExpeditionEvent.gd" id="2_6fhf1"]
+
+[sub_resource type="Resource" id="Resource_fsryu"]
+script = ExtResource("1_utekd")
+obstacle_name = "It That Has Always Been"
+encounter_text = "\"I hate you.\" The words echo through the chamber. \"Your lives and existence are both meaningless and empty. You are a facade concocted over the course of a week, born to do nothing and die like specks upon the timeline of eternity.\"
+
+\"I will turn you back to where you came from. Consider this your last chance to leave.\"
+
+A glowing beam of light penetrates of the chamber, imposing itself over all of existence. An all-seeing omniscient presence fills the room. The expedition draws their weapons, ready to fight for their literal lives."
+obstacle_hp = 52
+damage_type = 0
+weakness_type = 0
+resistance_type = 1
+
+[sub_resource type="Resource" id="Resource_jq84h"]
+script = ExtResource("1_utekd")
+obstacle_name = "Grief"
+encounter_text = "How do you fight an emotion? A belief, an experience? You cannot. You can only let it pass through you. I'm sorry to put you through this. But you are stronger than it, and your life is greater than it. So draw your weapons, and face it head on."
+obstacle_hp = 40
+damage_type = 0
+weakness_type = 0
+resistance_type = 1
+
+[sub_resource type="Resource" id="Resource_qk4ou"]
+script = ExtResource("1_utekd")
+obstacle_name = "Despair"
+encounter_text = "Despair is a fate worse than death, a burnt out husk of hope. A corpse of a life and existence that could have been, someday. I'm sorry to put you through this. But you are stronger than it, and your life is greater than it. So brave your hearts, and look up."
+obstacle_hp = 40
+damage_type = 0
+weakness_type = 0
+resistance_type = 1
+
+[sub_resource type="Resource" id="Resource_cdnns"]
+script = ExtResource("1_utekd")
+obstacle_name = "Pain"
+encounter_text = "Being alive can be agonizing sometimes, can't it? To toil so hard and so much to be someone, to be something and to have that dream crushed in the palm of your hands... that is pain. How do you fight an emotion, a belief, an experience? You cannot. You can only let it pass through you. I'm sorry to put you through this. But you are stronger than this. I believe in a brighter future with you in it. So draw your weapons and raise them until the end."
+obstacle_hp = 4
+damage_type = 0
+weakness_type = 0
+resistance_type = 1
+
+[sub_resource type="Resource" id="Resource_3qb1g"]
+script = ExtResource("1_utekd")
+obstacle_name = "Draco Stellae"
+encounter_text = "Silence fills the space. A sensation washes over the expedition. Looking up, a beautiful night sky fills the chamber, turning it from a dark void to a brilliant constellation. The stars shift and shudder and begin to move -- an enormous shape begins to move. A dragon made of stars begins to phase through the expedition group, pulling them back and away. 
+
+To make any progress, it must be put down."
+obstacle_hp = 32
+damage_type = 0
+weakness_type = 0
+resistance_type = 6
+
+[sub_resource type="Resource" id="Resource_28oft"]
+script = ExtResource("1_utekd")
+obstacle_name = "Obstacle"
+encounter_text = ""
+obstacle_hp = 4
+damage_type = 0
+weakness_type = 0
+resistance_type = null
+
+[sub_resource type="Resource" id="Resource_5vyat"]
+script = ExtResource("1_utekd")
+obstacle_name = "Obstacle"
+encounter_text = ""
+obstacle_hp = 4
+damage_type = 0
+weakness_type = 0
+resistance_type = null
+
+[sub_resource type="Resource" id="Resource_xy4h4"]
+script = ExtResource("1_utekd")
+obstacle_name = "Life"
+encounter_text = "This world you know. This world you have lived through. How does it feel? What did it make you feel? Do you feel like it lived? All of you have come here to see the world to the end. To see the next world. 
+
+I hope this made you feel something."
+obstacle_hp = 2
+damage_type = 0
+weakness_type = 0
+resistance_type = 0
+
+[sub_resource type="Resource" id="Resource_yy87q"]
+script = ExtResource("2_6fhf1")
+event_text = "The fabric of the world begins to tear, partially shattering the sanity of %s. \"God help us,\" they beg to no one in particular."
+result = -1
+
+[sub_resource type="Resource" id="Resource_f6dfo"]
+script = ExtResource("2_6fhf1")
+event_text = "%s realizes their existence is meaningless, a fleeting blip in the history of a greater world they will never be a part of. They begin to despair."
+result = -1
+
+[sub_resource type="Resource" id="Resource_efy1p"]
+script = ExtResource("2_6fhf1")
+event_text = "%s vanishes from existence for a few hours, before returning haggard and starving. The expedition stops to take care of them."
+result = -1
+
+[sub_resource type="Resource" id="Resource_3kt1a"]
+script = ExtResource("2_6fhf1")
+event_text = "%s looks up. \"Hi, Player. I hope you're enjoying this game. It means a lot for you to see this. Take it easy.\" Nobody else comments."
+result = 0
+
+[sub_resource type="Resource" id="Resource_0xfrf"]
+script = ExtResource("2_6fhf1")
+event_text = "%s finds that their limbs and body begin to disintegrate. Panicked at first, an hour passes and they realize they have regenerated, perfectly healthy. They are shaken but okay."
+result = 0
+
+[sub_resource type="Resource" id="Resource_2f5ni"]
+script = ExtResource("2_6fhf1")
+event_text = "%s looks up. \"Even if we were but specks on a screen, perhaps this experience will remain with you after we have all gone dark.\" They salute slowly."
+result = 0
+
+[sub_resource type="Resource" id="Resource_yjfmi"]
+script = ExtResource("2_6fhf1")
+event_text = "%s sees a small flock of blue-black oil-slick iridiscent pigeons fly past the expedition, chirping a beautiful melody. Perhaps it is not all bad down here, they think."
+result = 0
+
+[sub_resource type="Resource" id="Resource_orwd1"]
+script = ExtResource("2_6fhf1")
+event_text = "A small purple crystalline doe nuzzles its head into %s's side. It sticks with the expedition for a few hours before turning into aetherial dust, much to their dismay."
+result = 0
+
+[sub_resource type="Resource" id="Resource_qqg4w"]
+script = ExtResource("2_6fhf1")
+event_text = "%s achieves enlightenment for an hour. They realize that even if the world is cruel and fickle and their life is meaningless, the mere act of existing now to themselves is enough to give them the motivation to go on and live."
+result = 1
+
+[sub_resource type="Resource" id="Resource_rwd5i"]
+script = ExtResource("2_6fhf1")
+event_text = "The beauty of the world around %s shakes them to their core. They feel like the world is a stage, but they are a main character. They feel reinvigorated."
+result = 1
+
+[resource]
+script = ExtResource("1_ve8wc")
+members_required = 20
+max_members = 99999
+expedition_time = 120.0
+random_events = [SubResource("Resource_yy87q"), SubResource("Resource_f6dfo"), SubResource("Resource_efy1p"), SubResource("Resource_3kt1a"), SubResource("Resource_0xfrf"), SubResource("Resource_2f5ni"), SubResource("Resource_yjfmi"), SubResource("Resource_orwd1"), SubResource("Resource_qqg4w"), SubResource("Resource_rwd5i")]
+obstacles = [SubResource("Resource_fsryu"), SubResource("Resource_jq84h"), SubResource("Resource_qk4ou"), SubResource("Resource_cdnns"), SubResource("Resource_3qb1g"), SubResource("Resource_28oft"), SubResource("Resource_5vyat"), SubResource("Resource_xy4h4")]

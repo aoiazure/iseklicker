@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuwqwprwfpkx5"]
+
+[ext_resource type="Script" path="res://party/Character.gd" id="1_3h3cr"]
+
+[node name="Character" type="Node2D"]
+script = ExtResource("1_3h3cr")
+
+[node name="CharacterIcon" type="Sprite2D" parent="."]

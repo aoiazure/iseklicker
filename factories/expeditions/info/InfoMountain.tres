@@ -1,0 +1,98 @@
+[gd_resource type="Resource" load_steps=17 format=3 uid="uid://bja01kyvsqsjm"]
+
+[ext_resource type="Script" path="res://factories/expeditions/expedition_events/ExpeditionObstacle.gd" id="1_87y78"]
+[ext_resource type="Script" path="res://factories/expeditions/expedition_events/ExpeditionEvent.gd" id="1_e71lw"]
+[ext_resource type="Script" path="res://factories/expeditions/ExpeditionInfo.gd" id="1_l7fvq"]
+
+[sub_resource type="Resource" id="Resource_ee7bj"]
+script = ExtResource("1_87y78")
+obstacle_name = "Ice Dragon"
+encounter_text = "A roar rips through the sky. Heat. That's the first sensation. Then the mass of flesh drops down -- a massive, whitescaled dragon, capable of eating one of you in a single bite. Weapons are drawn. It'll be a tough fight..."
+obstacle_hp = 36
+damage_type = 1
+weakness_type = 2
+resistance_type = 3
+
+[sub_resource type="Resource" id="Resource_khui0"]
+script = ExtResource("1_87y78")
+obstacle_name = "Apex Avian"
+encounter_text = "A shadow passes overhead - the expedition ducks and draws their blades. With a crash, it reveals itself: a large feathered creature, with a wingspan to eclipse a small vehicle."
+obstacle_hp = 30
+damage_type = 0
+weakness_type = 2
+resistance_type = 4
+
+[sub_resource type="Resource" id="Resource_02owe"]
+script = ExtResource("1_87y78")
+obstacle_name = "Slumbering Troll"
+encounter_text = "The ground rumbles as the snow upon it shakes and shifts. Bony skin sees the light for the first time in a millenia as an enormous troll emerges from the ground."
+obstacle_hp = 24
+damage_type = 1
+weakness_type = 2
+resistance_type = 1
+
+[sub_resource type="Resource" id="Resource_apqp7"]
+script = ExtResource("1_87y78")
+obstacle_name = "Pack of Wolves"
+encounter_text = "The howling of the wind turns out to be more than just that. In the dead of night, a pack of hungry wolves pounces on the expedition, craving flesh."
+obstacle_hp = 16
+damage_type = 0
+weakness_type = 1
+resistance_type = 0
+
+[sub_resource type="Resource" id="Resource_ksw6f"]
+script = ExtResource("1_87y78")
+obstacle_name = "Raccoon Horde"
+encounter_text = "A skitttering flurry of small, rabid mammals begins to swing out from the underbrush, ambushing the expedition."
+obstacle_hp = 10
+damage_type = 0
+weakness_type = 6
+resistance_type = 1
+
+[sub_resource type="Resource" id="Resource_u0rue"]
+script = ExtResource("1_e71lw")
+event_text = "A snowstorm absolutely waysides the expedition. %s uses additional supplies to get through the ordeal."
+result = -1
+
+[sub_resource type="Resource" id="Resource_0qoy1"]
+script = ExtResource("1_e71lw")
+event_text = "%s has their sleep interrupted by a flock of bats invading their camp, losing precious sleep."
+result = -1
+
+[sub_resource type="Resource" id="Resource_f4ks0"]
+script = ExtResource("1_e71lw")
+event_text = "The party makes headway into their expedition, finding scraps of another civilization -- or even the world %s hails from, perhaps?"
+result = 0
+
+[sub_resource type="Resource" id="Resource_qqfgn"]
+script = ExtResource("1_e71lw")
+event_text = "The sound of a wolf's howl startles %s. They're on alert for the rest of the day."
+result = 0
+
+[sub_resource type="Resource" id="Resource_wy1ul"]
+script = ExtResource("1_e71lw")
+event_text = "The day is plain and windy. %s wraps their coat tightly."
+result = 0
+
+[sub_resource type="Resource" id="Resource_rmefb"]
+script = ExtResource("1_e71lw")
+event_text = "%s takes a moment to breathe. The air is cold and almost hurts the lungs. It's another day out here."
+result = 0
+
+[sub_resource type="Resource" id="Resource_mhjgm"]
+script = ExtResource("1_e71lw")
+event_text = "The sky is remarkably clear and the earth stable enough to travel on. %s leads the charge forward."
+result = 1
+
+[sub_resource type="Resource" id="Resource_7gxf2"]
+script = ExtResource("1_e71lw")
+event_text = "%s finds a lost library, hidden in the burrows of snow. It has books speaking of a holy grail of knowledge."
+result = 1
+
+[resource]
+script = ExtResource("1_l7fvq")
+members_required = 4
+max_members = 6
+expedition_time = 60.0
+random_events = [SubResource("Resource_u0rue"), SubResource("Resource_0qoy1"), SubResource("Resource_f4ks0"), SubResource("Resource_qqfgn"), SubResource("Resource_wy1ul"), SubResource("Resource_rmefb"), SubResource("Resource_mhjgm"), SubResource("Resource_7gxf2")]
+obstacles = [SubResource("Resource_ee7bj"), SubResource("Resource_khui0"), SubResource("Resource_02owe"), SubResource("Resource_apqp7"), SubResource("Resource_ksw6f")]

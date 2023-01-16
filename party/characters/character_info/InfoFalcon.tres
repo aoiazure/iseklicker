@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_taeye"]
+[ext_resource type="Texture2D" uid="uid://dgpktvf6k24j0" path="res://party/characters/character_icons/FalconToken.png" id="2_kgx16"]
+[ext_resource type="Texture2D" uid="uid://bsxrb40qm2b65" path="res://party/characters/character_profiles/Falcon.png" id="3_bjp8r"]
+
+[resource]
+script = ExtResource("1_taeye")
+character_name = "Falcon"
+rarity = 0
+character_bio = "A boisterous man who made his name by fighting everyone he could.
+
+Uses Fire."
+summon_quote = "Who da hell are yous? Wanna fight? I'll fight ya, don't think I won't."
+attack_type = 2
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_kgx16")
+skin_profile = ExtResource("3_bjp8r")

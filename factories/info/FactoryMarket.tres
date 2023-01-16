@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bnoao31au2val"]
+
+[ext_resource type="Script" path="res://scripts/FactoryInfo.gd" id="1_ypcr6"]
+
+[resource]
+script = ExtResource("1_ypcr6")
+factory_name = "Marketplace"
+factory_type = 5
+automated = true
+count = 0
+buy_cost = 1000
+growth_rate = 1.4
+upgrade_count = 0
+upgrade_cost_ratio = 2000
+event_text = "You find an amazing deal.
+Your investments return great profit.
+You effortlessly predict the next big fad.
+You open a new store.
+You clean the shelves of your shop.
+You do some paperwork.
+You pay your taxes.
+You get a new sponsorship."
+base_output = 35
+output_rate = 7

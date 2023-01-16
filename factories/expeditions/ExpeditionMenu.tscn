@@ -1,0 +1,124 @@
+[gd_scene load_steps=6 format=3 uid="uid://bf2hpy3w73wu7"]
+
+[ext_resource type="PackedScene" uid="uid://c7lvjqvw7mldv" path="res://factories/FactoryMenu.tscn" id="1_c7egw"]
+[ext_resource type="Script" path="res://factories/expeditions/ExpeditionMenu.gd" id="2_y1jy7"]
+[ext_resource type="Script" path="res://scripts/FactoryInfo.gd" id="3_px380"]
+
+[sub_resource type="Resource" id="Resource_tc248"]
+script = ExtResource("3_px380")
+factory_name = "Factory Name"
+factory_type = null
+automated = false
+count = 0
+buy_cost = 1
+growth_rate = 1.07
+upgrade_count = 0
+upgrade_cost_ratio = 10
+event_text = null
+base_output = 1
+output_rate = -1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wmroa"]
+bg_color = Color(0.0156863, 0.0156863, 0.101961, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="ExpeditionMenu" instance=ExtResource("1_c7egw")]
+offset_right = 384.0
+script = ExtResource("2_y1jy7")
+expedition_info = null
+factory_info = SubResource("Resource_tc248")
+
+[node name="BuyButton" parent="Interactions" index="0"]
+visible = false
+
+[node name="Timer" parent="." index="2"]
+one_shot = true
+
+[node name="ExpeditionFinishPopup" type="PopupPanel" parent="." index="4"]
+title = "Expedition Log"
+size = Vector2i(600, 400)
+borderless = false
+
+[node name="Container" type="VSplitContainer" parent="ExpeditionFinishPopup" index="1"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 596.0
+offset_bottom = 396.0
+collapsed = true
+dragger_visibility = 2
+
+[node name="TextEdit" type="TextEdit" parent="ExpeditionFinishPopup/Container" index="0"]
+layout_mode = 2
+size_flags_vertical = 3
+editable = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+
+[node name="CloseButton" type="Button" parent="ExpeditionFinishPopup/Container" index="1"]
+layout_mode = 2
+text = "Close"
+
+[node name="EndGamePanel" type="PopupPanel" parent="." index="5"]
+size = Vector2i(700, 600)
+theme_override_styles/panel = SubResource("StyleBoxFlat_wmroa")
+
+[node name="Container" type="VBoxContainer" parent="EndGamePanel" index="1"]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 698.0
+offset_bottom = 598.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="RichTextLabel" parent="EndGamePanel/Container" index="0"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[p align=center]
+
+
+With the Time Abyss conquered, you and your party have finally breached the tenebrous membrane of reality. 
+
+The final door awaits you ahead. All this work and all this strife, all these memories and all these friends...
+
+Will you open the door?"
+fit_content_height = true
+
+[node name="Label2" type="RichTextLabel" parent="EndGamePanel/Container" index="1"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[p align=center]
+------
+
+Opening the door will end the game.
+Turn back now to continue playing."
+fit_content_height = true
+
+[node name="HSplitContainer" type="HBoxContainer" parent="EndGamePanel/Container" index="2"]
+layout_mode = 2
+alignment = 1
+
+[node name="EndButton" type="Button" parent="EndGamePanel/Container/HSplitContainer" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Yes, Open the Door"
+
+[node name="ReturnButton" type="Button" parent="EndGamePanel/Container/HSplitContainer" index="1"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "No, Turn Back"
+
+[connection signal="popup_hide" from="ExpeditionFinishPopup" to="." method="_on_expedition_finish_popup_popup_hide"]
+[connection signal="pressed" from="ExpeditionFinishPopup/Container/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="EndGamePanel/Container/HSplitContainer/EndButton" to="." method="_on_end_button_pressed"]
+[connection signal="pressed" from="EndGamePanel/Container/HSplitContainer/ReturnButton" to="." method="_on_return_button_pressed"]

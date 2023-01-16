@@ -1,0 +1,24 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bpl2iltoha4cq"]
+
+[ext_resource type="Script" path="res://scripts/FactoryInfo.gd" id="1_hqoks"]
+
+[resource]
+script = ExtResource("1_hqoks")
+factory_name = "Veggie Farm"
+factory_type = 2
+automated = true
+count = 0
+buy_cost = 300
+growth_rate = 1.8
+upgrade_count = 0
+upgrade_cost_ratio = 600
+event_text = "You sell some veggies.
+You get a nice yield.
+A good rain blesses the crops.
+A scarecrow keeps the veggies safe.
+You scare off some rabbits.
+You try out some new seeds.
+You use fresh water on the crops.
+Your old crop cart breaks down."
+base_output = 1
+output_rate = 1

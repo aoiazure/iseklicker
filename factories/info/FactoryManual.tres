@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bmtdy7vs8caw7"]
+
+[ext_resource type="Script" path="res://scripts/FactoryInfo.gd" id="1_2ytct"]
+
+[resource]
+script = ExtResource("1_2ytct")
+factory_name = "Manual Labor"
+factory_type = 0
+automated = false
+count = 0
+buy_cost = 150
+growth_rate = 3.0
+upgrade_count = 0
+upgrade_cost_ratio = 750
+event_text = "You did a side job.
+You helped a cat out of a tree.
+You found some coins.
+You cut a few expenses.
+You ferry some goods.
+You run a few errands.
+You sell some old gear.
+You cut some wood.
+You pet a cute dog.
+You hang out in a bar.
+You talk to some friends.
+You make some new friends."
+base_output = 1
+output_rate = -1

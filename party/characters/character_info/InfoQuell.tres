@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_ubre0"]
+[ext_resource type="Texture2D" uid="uid://6nuiqc7ik3n5" path="res://party/characters/character_icons/QuellToken.png" id="2_uhl0l"]
+[ext_resource type="Texture2D" uid="uid://c53mkwjqfqsu" path="res://party/characters/character_profiles/Quell.png" id="3_aqn4c"]
+
+[resource]
+script = ExtResource("1_ubre0")
+character_name = "Quell"
+rarity = 0
+character_bio = "A monk from a world where tournaments happen every year. He yearns to retire peacefully.
+
+Uses Earth."
+summon_quote = "Quiet is the field of grass that the enlightened rests upon. Loud is the unhappy heart. I will help you be at peace."
+attack_type = 5
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_uhl0l")
+skin_profile = ExtResource("3_aqn4c")

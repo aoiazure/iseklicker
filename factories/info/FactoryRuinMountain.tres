@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://db7ttwp2gbpq8"]
+
+[ext_resource type="Script" path="res://scripts/FactoryInfo.gd" id="1_m7yia"]
+
+[resource]
+script = ExtResource("1_m7yia")
+factory_name = "Mountain Ruins"
+factory_type = 7
+automated = false
+count = 0
+buy_cost = 1
+growth_rate = 1.07
+upgrade_count = 0
+upgrade_cost_ratio = 10
+event_text = ""
+base_output = 640
+output_rate = -1

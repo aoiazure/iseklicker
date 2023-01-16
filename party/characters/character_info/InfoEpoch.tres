@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_k7euo"]
+[ext_resource type="Texture2D" uid="uid://b3v14pul0heac" path="res://party/characters/character_icons/EpochToken.png" id="2_u4410"]
+[ext_resource type="Texture2D" uid="uid://i3omk8b25wp5" path="res://party/characters/character_profiles/Epoch.png" id="3_4u8vg"]
+
+[resource]
+script = ExtResource("1_k7euo")
+character_name = "Epoch"
+rarity = 2
+character_bio = "An inscrutable polemaster from another world. The lead general of an army, they had to put put down their own sibling.
+
+Uses Water."
+summon_quote = "Tell me. What do you fight for? Answer quickly before this spear finds a new home in your abdomen."
+attack_type = 3
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_u4410")
+skin_profile = ExtResource("3_4u8vg")

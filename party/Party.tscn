@@ -1,0 +1,74 @@
+[gd_scene load_steps=28 format=3 uid="uid://bqfnqpsnod5gs"]
+
+[ext_resource type="Script" path="res://party/Party.gd" id="1_6akxu"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoAbjura.tres" id="2_4nwue"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoYou.tres" id="2_nt2sh"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoBelle.tres" id="3_d3v25"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoCyan.tres" id="4_i5d74"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoXander.tres" id="4_kntag"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoWendell.tres" id="4_l4it2"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoVerity.tres" id="4_lvb11"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoUlther.tres" id="4_qikqv"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoZeroth.tres" id="5_7w7ek"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoDawn.tres" id="5_puxdu"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoEpoch.tres" id="6_wb85m"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoFalcon.tres" id="7_kdlwq"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoGael.tres" id="8_kwh6y"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoHynjan.tres" id="9_p2fwt"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoIris.tres" id="10_8rvco"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoJester.tres" id="11_g7is7"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoKynan.tres" id="12_p1a7h"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoLilac.tres" id="13_7bu3o"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoMura.tres" id="14_cm2sf"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoNova.tres" id="15_t4nxq"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoOrin.tres" id="16_me6yh"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoPreston.tres" id="17_44446"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoQuell.tres" id="18_e8ogb"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoRion.tres" id="19_qu55x"]
+[ext_resource type="Resource" path="res://party/characters/character_info/InfoSai.tres" id="20_6okc1"]
+[ext_resource type="Resource" uid="uid://ciu3l5imcddll" path="res://party/characters/character_info/InfoThaddeus.tres" id="21_3w3m6"]
+
+[node name="Party" type="PopupPanel"]
+initial_position = 1
+title = "Party Menu"
+size = Vector2i(700, 400)
+current_screen = -2
+visible = true
+borderless = false
+always_on_top = true
+script = ExtResource("1_6akxu")
+char_info = [ExtResource("2_4nwue"), ExtResource("3_d3v25"), ExtResource("4_i5d74"), ExtResource("5_puxdu"), ExtResource("6_wb85m"), ExtResource("7_kdlwq"), ExtResource("8_kwh6y"), ExtResource("9_p2fwt"), ExtResource("10_8rvco"), ExtResource("11_g7is7"), ExtResource("12_p1a7h"), ExtResource("13_7bu3o"), ExtResource("14_cm2sf"), ExtResource("15_t4nxq"), ExtResource("16_me6yh"), ExtResource("17_44446"), ExtResource("18_e8ogb"), ExtResource("19_qu55x"), ExtResource("20_6okc1"), ExtResource("21_3w3m6"), ExtResource("4_qikqv"), ExtResource("4_lvb11"), ExtResource("4_l4it2"), ExtResource("4_kntag"), ExtResource("2_nt2sh"), ExtResource("5_7w7ek")]
+
+[node name="Body" type="VSplitContainer" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 696.0
+offset_bottom = 396.0
+collapsed = true
+dragger_visibility = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="Body"]
+layout_mode = 2
+size_flags_vertical = 3
+collapsed = true
+dragger_visibility = 1
+
+[node name="InfoLabel" type="RichTextLabel" parent="Body/VSplitContainer"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+text = "Select character(s) to send."
+
+[node name="PartyMenu" type="ScrollContainer" parent="Body/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PartyMenu" type="VBoxContainer" parent="Body/VSplitContainer/PartyMenu"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ConfirmButton" type="Button" parent="Body"]
+layout_mode = 2
+text = "Confirm Selection"
+
+[connection signal="popup_hide" from="." to="." method="_on_popup_hide"]
+[connection signal="pressed" from="Body/ConfirmButton" to="." method="_on_confirm_button_pressed"]

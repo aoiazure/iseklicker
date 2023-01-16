@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhbbndaabmow5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hioar"]
+bg_color = Color(0.0509804, 0.0509804, 0.0509804, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yoeth"]
+font_size = 36
+outline_size = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_u7g7d"]
+font_size = 20
+
+[node name="Credits" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_hioar")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 1216.0
+offset_bottom = 656.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Thank you for playing!"
+label_settings = SubResource("LabelSettings_yoeth")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "
+This game was created under a week for the Clicker Jam Winter 2023.
+
+Reviews, feedback, and otherwise are all appreciated!"
+label_settings = SubResource("LabelSettings_u7g7d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "
+
+
+Designed, written, developed by Azure (@ao_k_oto on Twitter).
+
+
+
+Character sprites sourced from u/TheFlyingMinotaur and their Fire Emblem Sprite Creator.
+
+All SFX sourced from Nathan Gibson (ellr.itch.io).
+
+Sparkles, Sound UI Icon, and Info button UI by Delapouite under the CC3.0 license."
+label_settings = SubResource("LabelSettings_u7g7d")
+horizontal_alignment = 1
+vertical_alignment = 1

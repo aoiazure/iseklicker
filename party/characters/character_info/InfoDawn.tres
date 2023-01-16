@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_l2sgc"]
+[ext_resource type="Texture2D" uid="uid://bvalr7idmk52o" path="res://party/characters/character_icons/DawnToken.png" id="2_bgqp0"]
+[ext_resource type="Texture2D" uid="uid://w5wfq7mrifjp" path="res://party/characters/character_profiles/Dawn.png" id="3_wvon7"]
+
+[resource]
+script = ExtResource("1_l2sgc")
+character_name = "Dawn"
+rarity = 1
+character_bio = "A half-demon, half-mortal woman from a world where she must fight to even survive.
+
+Uses Fire."
+summon_quote = "Tomorrow will come, but if it is without me, then so be it. I breathe as though it will be my last."
+attack_type = 2
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_bgqp0")
+skin_profile = ExtResource("3_wvon7")

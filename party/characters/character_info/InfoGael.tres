@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_c8xj3"]
+[ext_resource type="Texture2D" uid="uid://dtbjlhfs2o2iw" path="res://party/characters/character_icons/GaelToken.png" id="2_b4hbu"]
+[ext_resource type="Texture2D" uid="uid://nu0sh16wo34q" path="res://party/characters/character_profiles/Gael.png" id="3_okreq"]
+
+[resource]
+script = ExtResource("1_c8xj3")
+character_name = "Gael"
+rarity = 0
+character_bio = "A tempestuous young lad from a world of airships and cloudscapes. Polite but aloof.
+
+Uses Wind."
+summon_quote = "Good morning! I was going for a stroll, but I suppose this works as well."
+attack_type = 4
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_b4hbu")
+skin_profile = ExtResource("3_okreq")

@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://iggan7yq8ik0"]
+
+[ext_resource type="Script" path="res://UI/CharacterDisplayButton.gd" id="1_10i0w"]
+[ext_resource type="Texture2D" uid="uid://bul0iw5l8fddo" path="res://assets/BlankQuestion.png" id="2_xqbvo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hkm83"]
+bg_color = Color(0.364706, 0.364706, 0.364706, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.223529, 0.223529, 0.223529, 1)
+border_blend = true
+
+[node name="CharacterDisplayButton" type="Button"]
+custom_minimum_size = Vector2(80, 80)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+expand_icon = true
+script = ExtResource("1_10i0w")
+
+[node name="InfoPopup" type="PopupPanel" parent="."]
+size = Vector2i(400, 225)
+wrap_controls = false
+theme_override_styles/panel = SubResource("StyleBoxFlat_hkm83")
+
+[node name="Container" type="HSplitContainer" parent="InfoPopup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 396.0
+offset_bottom = 388.0
+collapsed = true
+dragger_visibility = 2
+
+[node name="Split" type="VSplitContainer" parent="InfoPopup/Container"]
+layout_mode = 2
+collapsed = true
+dragger_visibility = 2
+
+[node name="Profile" type="TextureRect" parent="InfoPopup/Container/Split"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+texture = ExtResource("2_xqbvo")
+stretch_mode = 5
+
+[node name="Icon" type="TextureRect" parent="InfoPopup/Container/Split"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("2_xqbvo")
+stretch_mode = 5
+
+[node name="InfoLabel" type="RichTextLabel" parent="InfoPopup/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "You don't know anything about this character yet."
+autowrap_mode = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

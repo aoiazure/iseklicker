@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bap1swadyulx"]
+
+[ext_resource type="Script" path="res://scripts/FactoryInfo.gd" id="1_mcwry"]
+
+[resource]
+script = ExtResource("1_mcwry")
+factory_name = "Freelance"
+factory_type = 1
+automated = true
+count = 0
+buy_cost = 30
+growth_rate = 1.7
+upgrade_count = 0
+upgrade_cost_ratio = 150
+event_text = "You arrange to get some newspapers to the neighbors delivered.
+You help build a porch.
+You bartend for a busy weekend.
+You stock some shelves for a small store.
+You volunteer to be in an experiment.
+You work in a stable for a few days.
+You go fishing for a week."
+base_output = 1
+output_rate = 2

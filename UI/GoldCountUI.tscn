@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1ipbwkuhvs8p"]
+
+[ext_resource type="Script" path="res://scripts/GoldCountUI.gd" id="1_h4uga"]
+[ext_resource type="Texture2D" uid="uid://byk4vg2i71w3q" path="res://assets/Coins.png" id="2_fpm51"]
+[ext_resource type="Texture2D" uid="uid://u60tabu8cyd4" path="res://assets/info.svg" id="2_tnek4"]
+
+[node name="GoldCountUI" type="VSplitContainer"]
+offset_right = 196.0
+offset_bottom = 74.0
+collapsed = true
+dragger_visibility = 2
+script = ExtResource("1_h4uga")
+
+[node name="TopRow" type="HSplitContainer" parent="."]
+layout_mode = 2
+collapsed = true
+dragger_visibility = 2
+
+[node name="GoldCount" type="RichTextLabel" parent="TopRow"]
+custom_minimum_size = Vector2(196, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[p align=center][b][u]GOLD[/u][/b]"
+fit_content_height = true
+scroll_active = false
+
+[node name="ToggleGoldButton" type="TextureButton" parent="TopRow"]
+custom_minimum_size = Vector2(31, 31)
+layout_mode = 2
+size_flags_vertical = 8
+toggle_mode = true
+texture_normal = ExtResource("2_tnek4")
+texture_pressed = ExtResource("2_tnek4")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="GoldCountLabel" type="Button" parent="."]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+shortcut_in_tooltip = false
+text = "0"
+icon = ExtResource("2_fpm51")
+flat = true
+expand_icon = true
+
+[connection signal="pressed" from="TopRow/ToggleGoldButton" to="." method="_on_total_gold_button_pressed"]

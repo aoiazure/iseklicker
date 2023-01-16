@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_3atfc"]
+[ext_resource type="Texture2D" uid="uid://b8qx0i5cndnba" path="res://party/characters/character_icons/NovaToken.png" id="2_s6se3"]
+[ext_resource type="Texture2D" uid="uid://crspy3ddv3o1o" path="res://party/characters/character_profiles/Nova.png" id="3_rp2cg"]
+
+[resource]
+script = ExtResource("1_3atfc")
+character_name = "Nova"
+rarity = 0
+character_bio = "A young woman who is currently leading a rebellion against an oppressive government.
+
+Uses Light."
+summon_quote = "Name's Nova. If I didn't know better, I'd be blasting you through a wall. What do you need? Help? Fine, if you help me after."
+attack_type = 6
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_s6se3")
+skin_profile = ExtResource("3_rp2cg")

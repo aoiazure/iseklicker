@@ -1,0 +1,89 @@
+[gd_resource type="Resource" load_steps=16 format=3 uid="uid://b30pij433r2if"]
+
+[ext_resource type="Script" path="res://factories/expeditions/ExpeditionInfo.gd" id="1_ianu0"]
+[ext_resource type="Script" path="res://factories/expeditions/expedition_events/ExpeditionObstacle.gd" id="1_v8anr"]
+[ext_resource type="Script" path="res://factories/expeditions/expedition_events/ExpeditionEvent.gd" id="2_5nuol"]
+
+[sub_resource type="Resource" id="Resource_ofcqd"]
+script = ExtResource("1_v8anr")
+obstacle_name = "Kraken"
+encounter_text = "The ocean stirs, and with a tumultuous torrent of terrifying proportions erupts from the depths, revealing itself to be a giga-kraken. A worthy foe for you to put down."
+obstacle_hp = 40
+damage_type = 0
+weakness_type = 7
+resistance_type = 3
+
+[sub_resource type="Resource" id="Resource_afhc6"]
+script = ExtResource("1_v8anr")
+obstacle_name = "Merfolk Tribe"
+encounter_text = "A squad of merfolk warriors arrrive, holding spears at the expedition. No one shares languages or words, but the message is clear. Only one side is getting out of this."
+obstacle_hp = 30
+damage_type = 0
+weakness_type = 1
+resistance_type = 3
+
+[sub_resource type="Resource" id="Resource_elgfe"]
+script = ExtResource("1_v8anr")
+obstacle_name = "Siren"
+encounter_text = "A quiet whisper of song on the wind. Honeyed, sweet, and sickly -- a beautiful, haunting siren. The expedition prepares themselves for the worst."
+obstacle_hp = 24
+damage_type = 0
+weakness_type = 6
+resistance_type = 3
+
+[sub_resource type="Resource" id="Resource_sqmgn"]
+script = ExtResource("1_v8anr")
+obstacle_name = "Scavenger Seagulls"
+encounter_text = "A flock of nuisances drop upon the expedition, looking to consume any supplies they might have."
+obstacle_hp = 18
+damage_type = 0
+weakness_type = 4
+resistance_type = 0
+
+[sub_resource type="Resource" id="Resource_f4btv"]
+script = ExtResource("2_5nuol")
+event_text = "A storm catches the expedition off-guard, catching some of %s's supplies."
+result = -1
+
+[sub_resource type="Resource" id="Resource_kf2rx"]
+script = ExtResource("2_5nuol")
+event_text = "%s unfortunately tips off the side of the vessel, falling into the water. Upon getting up, several crabs had made off with their gear."
+result = -1
+
+[sub_resource type="Resource" id="Resource_ysn4s"]
+script = ExtResource("2_5nuol")
+event_text = "An enormous whale surfaces under the expedition, pulling them out of the water. It rests there on the surface for several days, beaching the expedition. %s grows restless."
+result = -1
+
+[sub_resource type="Resource" id="Resource_8twme"]
+script = ExtResource("2_5nuol")
+event_text = "The expedition sails past a beautiful coral reef. %s decides to draw a picture of it to keep as a memory."
+result = 0
+
+[sub_resource type="Resource" id="Resource_04mgs"]
+script = ExtResource("2_5nuol")
+event_text = "%s attaches a board to the end of the boat, going water skiing."
+result = 0
+
+[sub_resource type="Resource" id="Resource_85oq1"]
+script = ExtResource("2_5nuol")
+event_text = "While piloting the expedition through the waters, %s notices a peculiar patch in the ocean and suggests they wait for the night. It turns out to have been a bioluminescent algae show!"
+result = 0
+
+[sub_resource type="Resource" id="Resource_d5pv2"]
+script = ExtResource("2_5nuol")
+event_text = "A great tailwind pushes the expedition forward. %s helps unfurl the sails to catch it."
+result = 1
+
+[sub_resource type="Resource" id="Resource_gbtn7"]
+script = ExtResource("2_5nuol")
+event_text = "%s drops a fishing line with the intention of gathering food. Instead, they found a treasure chest, filled with gems and gold!"
+result = 1
+
+[resource]
+script = ExtResource("1_ianu0")
+members_required = 6
+max_members = 10
+expedition_time = 90.0
+random_events = [SubResource("Resource_f4btv"), SubResource("Resource_kf2rx"), SubResource("Resource_ysn4s"), SubResource("Resource_8twme"), SubResource("Resource_04mgs"), SubResource("Resource_85oq1"), SubResource("Resource_d5pv2"), SubResource("Resource_gbtn7")]
+obstacles = [SubResource("Resource_ofcqd"), SubResource("Resource_afhc6"), SubResource("Resource_elgfe"), SubResource("Resource_sqmgn")]

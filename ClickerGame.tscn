@@ -1,0 +1,269 @@
+[gd_scene load_steps=26 format=3 uid="uid://don2vuwdnvawa"]
+
+[ext_resource type="Script" path="res://ClickerGame.gd" id="1_hlgvp"]
+[ext_resource type="PackedScene" uid="uid://d1ipbwkuhvs8p" path="res://UI/GoldCountUI.tscn" id="2_qmrub"]
+[ext_resource type="Script" path="res://scripts/EarnGoldButton.gd" id="3_7s1m3"]
+[ext_resource type="Script" path="res://UI/Console.gd" id="4_bcewu"]
+[ext_resource type="PackedScene" uid="uid://dw75amn1ar7p6" path="res://UI/SummonPanel.tscn" id="4_n35ox"]
+[ext_resource type="PackedScene" uid="uid://c7lvjqvw7mldv" path="res://factories/FactoryMenu.tscn" id="6_fyuf0"]
+[ext_resource type="Resource" uid="uid://bmtdy7vs8caw7" path="res://factories/info/FactoryManual.tres" id="7_hg8gq"]
+[ext_resource type="Resource" uid="uid://bap1swadyulx" path="res://factories/info/FactoryFreelance.tres" id="8_b680u"]
+[ext_resource type="Resource" uid="uid://bpl2iltoha4cq" path="res://factories/info/FactoryVegetable.tres" id="8_m5voi"]
+[ext_resource type="PackedScene" uid="uid://bf2hpy3w73wu7" path="res://factories/expeditions/ExpeditionMenu.tscn" id="9_ugwmc"]
+[ext_resource type="Resource" uid="uid://c0rlmm4542ki0" path="res://factories/info/FactoryStudy.tres" id="9_xkmky"]
+[ext_resource type="Resource" uid="uid://chbhq0lev5r2v" path="res://factories/info/FactoryMining.tres" id="10_llh67"]
+[ext_resource type="Resource" uid="uid://c2h1jm48bsf4y" path="res://factories/info/FactoryDelve.tres" id="11_5y4nv"]
+[ext_resource type="Resource" uid="uid://bnoao31au2val" path="res://factories/info/FactoryMarket.tres" id="11_fqfxk"]
+[ext_resource type="Resource" uid="uid://b3hmdkn8a0crq" path="res://factories/expeditions/info/InfoDelve.tres" id="13_p7sgn"]
+[ext_resource type="Resource" uid="uid://bja01kyvsqsjm" path="res://factories/expeditions/info/InfoMountain.tres" id="15_kwmou"]
+[ext_resource type="Resource" uid="uid://db7ttwp2gbpq8" path="res://factories/info/FactoryRuinMountain.tres" id="16_83fcr"]
+[ext_resource type="Resource" uid="uid://b30pij433r2if" path="res://factories/expeditions/info/InfoOcean.tres" id="16_atkco"]
+[ext_resource type="Resource" uid="uid://bp54id52tsdfe" path="res://factories/expeditions/info/InfoAbyss.tres" id="17_1ik4i"]
+[ext_resource type="Resource" uid="uid://bn1dltlxiico0" path="res://factories/info/FactoryRuinOcean.tres" id="18_duc7p"]
+[ext_resource type="PackedScene" uid="uid://cnekmn1tj8d1u" path="res://UI/PartyMenu.tscn" id="18_oj7ml"]
+[ext_resource type="Resource" uid="uid://ckpp6rfhprqgg" path="res://factories/info/FactoryTimeAbyss.tres" id="20_xaw30"]
+[ext_resource type="PackedScene" uid="uid://ds8su4pfauj0u" path="res://UI/SoundMenu.tscn" id="22_pf7sg"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_ony8t"]
+keycode = 69
+
+[sub_resource type="Shortcut" id="Shortcut_3eda3"]
+events = [SubResource("InputEventKey_ony8t")]
+
+[node name="ClickerGame" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hlgvp")
+metadata/_edit_lock_ = true
+
+[node name="UI" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 1264.0
+offset_bottom = 704.0
+theme_override_constants/separation = 8
+
+[node name="Column1" type="VBoxContainer" parent="UI"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="GoldCountUI" parent="UI/Column1" instance=ExtResource("2_qmrub")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="UI/Column1"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="EarnGilButton" type="Button" parent="UI/Column1"]
+layout_mode = 2
+shortcut_in_tooltip = false
+action_mode = 0
+shortcut = SubResource("Shortcut_3eda3")
+text = "Earn Gil"
+script = ExtResource("3_7s1m3")
+
+[node name="HSeparator2" type="HSeparator" parent="UI/Column1"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="TabContainer" type="TabContainer" parent="UI/Column1"]
+layout_mode = 2
+size_flags_vertical = 3
+tab_alignment = 1
+
+[node name="Log" type="TextEdit" parent="UI/Column1/TabContainer"]
+custom_minimum_size = Vector2(0, 224)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+placeholder_text = "
+
+
+
+
+
+
+
+
+
+
+"
+editable = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+script = ExtResource("4_bcewu")
+
+[node name="Summon" parent="UI/Column1/TabContainer" instance=ExtResource("4_n35ox")]
+visible = false
+layout_mode = 2
+growth_rate = 1.3
+
+[node name="VSeparator" type="VSeparator" parent="UI"]
+layout_mode = 2
+
+[node name="Column2" type="VSplitContainer" parent="UI"]
+layout_mode = 2
+size_flags_vertical = 3
+collapsed = true
+dragger_visibility = 2
+
+[node name="UpgradeLabel" type="RichTextLabel" parent="UI/Column2"]
+custom_minimum_size = Vector2(196, 0)
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[p align=center][b][u]UPGRADES[/u][/b]"
+fit_content_height = true
+scroll_active = false
+
+[node name="Scroll" type="ScrollContainer" parent="UI/Column2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Container" type="VBoxContainer" parent="UI/Column2/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="HSeparator" type="HSeparator" parent="UI/Column2/Scroll/Container"]
+layout_mode = 2
+
+[node name="ManualMenu" parent="UI/Column2/Scroll/Container" instance=ExtResource("6_fyuf0")]
+layout_mode = 2
+factory_info = ExtResource("7_hg8gq")
+
+[node name="FreelanceMenu" parent="UI/Column2/Scroll/Container" instance=ExtResource("6_fyuf0")]
+visible = false
+layout_mode = 2
+factory_info = ExtResource("8_b680u")
+sound = "res://assets/sounds/ui_feedback/Modern14.mp3"
+
+[node name="VeggieMenu" parent="UI/Column2/Scroll/Container" instance=ExtResource("6_fyuf0")]
+visible = false
+layout_mode = 2
+factory_info = ExtResource("8_m5voi")
+sound = "res://assets/sounds/ui_feedback/Wood Block2.mp3"
+
+[node name="StudyMenu" parent="UI/Column2/Scroll/Container" instance=ExtResource("6_fyuf0")]
+visible = false
+layout_mode = 2
+factory_info = ExtResource("9_xkmky")
+sound = "res://assets/sounds/ui_feedback/Wood Block1.mp3"
+
+[node name="MiningMenu" parent="UI/Column2/Scroll/Container" instance=ExtResource("6_fyuf0")]
+visible = false
+layout_mode = 2
+factory_info = ExtResource("10_llh67")
+sound = "res://assets/sounds/ui_feedback/Coffee1.mp3"
+
+[node name="MarketMenu" parent="UI/Column2/Scroll/Container" instance=ExtResource("6_fyuf0")]
+visible = false
+layout_mode = 2
+factory_info = ExtResource("11_fqfxk")
+sound = "res://assets/sounds/ui_feedback/Coffee2.mp3"
+
+[node name="VSeparator2" type="VSeparator" parent="UI"]
+layout_mode = 2
+
+[node name="Column3" type="VSplitContainer" parent="UI"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+size_flags_vertical = 3
+collapsed = true
+dragger_visibility = 2
+
+[node name="UpgradeLabel" type="RichTextLabel" parent="UI/Column3"]
+custom_minimum_size = Vector2(196, 0)
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[p align=center][b][u]EXPEDITIONS[/u][/b]"
+fit_content_height = true
+scroll_active = false
+
+[node name="Scroll" type="ScrollContainer" parent="UI/Column3"]
+clip_contents = false
+layout_mode = 2
+
+[node name="Container" type="VBoxContainer" parent="UI/Column3/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HSeparator" type="HSeparator" parent="UI/Column3/Scroll/Container"]
+layout_mode = 2
+
+[node name="DelveMenu" parent="UI/Column3/Scroll/Container" instance=ExtResource("9_ugwmc")]
+visible = false
+layout_mode = 2
+expedition_info = ExtResource("13_p7sgn")
+factory_info = ExtResource("11_5y4nv")
+sound = "res://assets/sounds/ui_feedback/African4.mp3"
+
+[node name="MountainMenu" parent="UI/Column3/Scroll/Container" instance=ExtResource("9_ugwmc")]
+visible = false
+layout_mode = 2
+expedition_info = ExtResource("15_kwmou")
+factory_info = ExtResource("16_83fcr")
+sound = "res://assets/sounds/ui_feedback/African4.mp3"
+
+[node name="OceanMenu" parent="UI/Column3/Scroll/Container" instance=ExtResource("9_ugwmc")]
+visible = false
+layout_mode = 2
+expedition_info = ExtResource("16_atkco")
+factory_info = ExtResource("18_duc7p")
+sound = "res://assets/sounds/ui_feedback/African4.mp3"
+
+[node name="AbyssMenu" parent="UI/Column3/Scroll/Container" instance=ExtResource("9_ugwmc")]
+visible = false
+layout_mode = 2
+expedition_info = ExtResource("17_1ik4i")
+factory_info = ExtResource("20_xaw30")
+sound = "res://assets/sounds/ui_feedback/African4.mp3"
+
+[node name="VSeparator3" type="VSeparator" parent="UI"]
+layout_mode = 2
+
+[node name="Column4" type="VSplitContainer" parent="UI"]
+layout_mode = 2
+size_flags_horizontal = 3
+collapsed = true
+dragger_visibility = 2
+
+[node name="PartyLabel" type="RichTextLabel" parent="UI/Column4"]
+custom_minimum_size = Vector2(196, 0)
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 24
+bbcode_enabled = true
+text = "[p align=center][b][u]PARTY[/u][/b]"
+fit_content_height = true
+scroll_active = false
+
+[node name="PartyMenu" parent="UI/Column4" instance=ExtResource("18_oj7ml")]
+layout_mode = 2
+
+[node name="SoundMenu" parent="." instance=ExtResource("22_pf7sg")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.969
+anchor_top = 0.944
+anchor_right = 0.994
+anchor_bottom = 0.989
+offset_left = -0.320068
+offset_top = 0.319946
+offset_right = -0.320068
+offset_bottom = -0.0800171
+
+[connection signal="earn_gil" from="UI/Column1/EarnGilButton" to="." method="_on_earn_gil_button_earn_gil"]
+[connection signal="pressed" from="UI/Column1/EarnGilButton" to="UI/Column1/EarnGilButton" method="_on_pressed"]

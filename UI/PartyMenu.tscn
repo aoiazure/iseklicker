@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnekmn1tj8d1u"]
+
+[ext_resource type="Script" path="res://UI/PartyMenu.gd" id="1_xm123"]
+
+[node name="PartyMenu" type="VBoxContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_xm123")
+
+[node name="Barracks" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Container" type="CenterContainer" parent="Barracks"]
+layout_mode = 2
+
+[node name="FiveStars" type="GridContainer" parent="Barracks/Container"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+columns = 3
+
+[node name="HSeparator" type="HSeparator" parent="Barracks"]
+layout_mode = 2
+
+[node name="Container2" type="CenterContainer" parent="Barracks"]
+layout_mode = 2
+
+[node name="FourStars" type="GridContainer" parent="Barracks/Container2"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+columns = 4
+
+[node name="HSeparator2" type="HSeparator" parent="Barracks"]
+layout_mode = 2
+
+[node name="Container3" type="CenterContainer" parent="Barracks"]
+layout_mode = 2
+
+[node name="ThreeStars" type="GridContainer" parent="Barracks/Container3"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+columns = 4
+
+[node name="HSeparator3" type="HSeparator" parent="Barracks"]
+layout_mode = 2

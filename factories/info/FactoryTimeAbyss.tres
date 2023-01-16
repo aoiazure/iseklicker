@@ -1,0 +1,17 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ckpp6rfhprqgg"]
+
+[ext_resource type="Script" path="res://scripts/FactoryInfo.gd" id="1_1gibv"]
+
+[resource]
+script = ExtResource("1_1gibv")
+factory_name = "The Time Abyss"
+factory_type = 9
+automated = false
+count = 0
+buy_cost = 1
+growth_rate = 1.07
+upgrade_count = 0
+upgrade_cost_ratio = 10
+event_text = ""
+base_output = 1440
+output_rate = -1

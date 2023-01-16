@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_65827"]
+[ext_resource type="Texture2D" uid="uid://cpkyfr328m8mm" path="res://party/characters/character_icons/SaiToken.png" id="2_uqdeg"]
+[ext_resource type="Texture2D" uid="uid://bih5b5qxiplf1" path="res://party/characters/character_profiles/Sai.png" id="3_w71ql"]
+
+[resource]
+script = ExtResource("1_65827")
+character_name = "Sai"
+rarity = 0
+character_bio = "An assassin from another world of subterfuge and politics. Endlessly effective at their job.
+
+Uses Fire."
+summon_quote = "If you don't explain this right now, I'll kill you. Simple as that."
+attack_type = 2
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_uqdeg")
+skin_profile = ExtResource("3_w71ql")

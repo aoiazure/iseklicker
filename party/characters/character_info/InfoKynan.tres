@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_bih72"]
+[ext_resource type="Texture2D" uid="uid://c3fdton21bt8w" path="res://party/characters/character_icons/KynanToken.png" id="2_ju2dl"]
+[ext_resource type="Texture2D" uid="uid://cr313sdgmnbsj" path="res://party/characters/character_profiles/Kynan.png" id="3_bx1xs"]
+
+[resource]
+script = ExtResource("1_bih72")
+character_name = "Kynan"
+rarity = 0
+character_bio = "A man who has mastered the art of spears. He hails from a world of frequent strife, but he strives  for peace.
+
+Uses Water."
+summon_quote = "I may not be from around here, but I certainly know how to get things done."
+attack_type = 3
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_ju2dl")
+skin_profile = ExtResource("3_bx1xs")

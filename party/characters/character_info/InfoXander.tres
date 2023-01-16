@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://party/characters/character_info/CharacterInfo.gd" id="1_o01mv"]
+[ext_resource type="Texture2D" uid="uid://cuu1cfr4o1dgj" path="res://party/characters/character_icons/XanderToken.png" id="2_oi1i8"]
+[ext_resource type="Texture2D" uid="uid://cqmbyc8cqy8xn" path="res://party/characters/character_profiles/Xander.png" id="3_ok007"]
+
+[resource]
+script = ExtResource("1_o01mv")
+character_name = "Xander"
+rarity = 0
+character_bio = "A mage who craves ultimate god-like power over anything. Hasn't amounted to much, yet.
+
+Uses Dark."
+summon_quote = "... so you too use forces unfit for mortals. Very well. Let us learn from each other."
+attack_type = 7
+hp = 0
+exploration_skill = 0
+skin_icon = ExtResource("2_oi1i8")
+skin_profile = ExtResource("3_ok007")
